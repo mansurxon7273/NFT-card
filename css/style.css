@@ -1,0 +1,160 @@
+/* outfit-300 - latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url('../fonts/outfit-v6-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/outfit-v6-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* outfit-regular - latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/outfit-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/outfit-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* outfit-600 - latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('../fonts/outfit-v6-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/outfit-v6-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+:root{
+  --body-bgColor:#0D192C;
+  --card-bgColor:#15263F;
+  --softBlueColor: #8BACD9;
+  --CyanColor: #00FFF8;
+  --WhiteColor: #ffffff;
+  --hr-bgColor:#2E405A;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-bgColor);
+  min-height: 100vh;
+  font-family: 'Outfit';
+  font-style: normal;
+}
+.card{
+  padding: 2.4rem 2.4rem 3.2rem ;
+  max-width: 350px;
+  background-color: var(--card-bgColor);
+  border-radius: 15px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.0952917);
+
+}
+.card-img{
+  background: url('../images/Rectangle\ Copy.png');
+  margin-bottom: 2.4rem;
+  width: 302px;
+  height: 302px;
+  border-radius: 15px;display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-img:hover{
+  background: linear-gradient(rgb(0, 255, 248, 0.6), rgb(0, 255, 248, 0.6)), url('../images/Rectangle\ Copy.png');
+}
+.card-img:hover::after{
+  content: url('../images/Shape.svg');
+}
+.card__heading{
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  color: var(--WhiteColor);
+  margin-bottom: 1.6rem;
+}
+.card__heading:hover{
+  color: var(--CyanColor);
+}
+.card__decr{
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  color: var(--softBlueColor);
+  margin-bottom: 2.4rem;
+}
+.card-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+  align-items: center;
+}
+.card-wrapper span{
+  display: flex;
+  align-items: center;
+}
+.card-wrapper__icon{
+  margin-right: 0.65rem;
+}
+.wrapper__left{
+  color: var(--CyanColor);
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+.wrapper__right{
+  color: var(--softBlueColor);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+hr{
+  border: 1px solid var(--hr-bgColor);
+  margin-bottom: 1.6rem;
+}
+.card-block{
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+.card-block__text{
+  font-weight: 400;
+  color: var(--softBlueColor);
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+.card-block__text span{
+  color: var(--WhiteColor);
+  margin-left: 0.5rem;
+}
+.card-block__text span:hover{
+  color: var(--CyanColor);
+}
+/* Responsive mobile version */
+@media (max-width: 400px) {
+  .card{
+    max-width: 327px;
+    padding-bottom: 2.4rem;
+  }
+  .card-img{
+    width: 278px;
+    height: 278px;
+  }
+}
+/* Background retrina */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .card-img{
+    background: url('../images/Rectangle\ Copy@2x.png.png');
+  }
+  .card-img:hover{
+    background: linear-gradient(rgb(0, 255, 248, 0.6), rgb(0, 255, 248, 0.6)), url('../images/Rectangle\ Copy@2x.png.png');
+  }
+}
